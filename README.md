@@ -34,7 +34,13 @@ Tools • Dart 2.15.1
 
 ## Running the app
 
-1. After this open a simulator using Xcode, to do this you can run the following command in the terminal.
+1. After forking the repo, install all dependencies by running the following command in your project directory.
+
+```bash
+flutter pub get
+```
+
+2. After this open a simulator using Xcode, to do this you can run the following command in the terminal.
 
 ```bash
 open -a Simulator
@@ -43,7 +49,7 @@ open -a Simulator
 From this menu you can spin up a simulator. I will be using an iPhone 12 simulator.
 ![Open Simulator Menu](/images/simulator-select.png?raw=true)
 
-2. To start up the app use
+3. To start up the app use
 
 ```bash
 flutter run
