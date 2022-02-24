@@ -38,5 +38,5 @@ From this menu you can spin up a simulator. I will be using an iPhone 12 simulat
 ```bash
 flutter run
 ``` 
-OR if using vscode you can use run the app by doing the following:
+OR if using vscode you should run the app by doing the following, this will ensure that you get the full suite of functinality enabled by the Flutter/Dart extensions:
 ![Open Simulator Menu](/images/run-app.png?raw=true)
