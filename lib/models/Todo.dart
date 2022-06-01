@@ -6,8 +6,7 @@ class Todo {
   bool isCompleted;
 
   Todo({
-    required this.id,
     required this.todoContent,
     required this.isCompleted,
-  });
+  }) : id = UniqueKey();
 }

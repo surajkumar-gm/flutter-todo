@@ -1,15 +1,20 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:wa_clone/provider/todo.dart';
+import 'package:wa_clone/shared/drawer.dart';
 import 'package:wa_clone/widgets/HomeWidgets/HeaderSection.dart';
 import 'package:wa_clone/widgets/HomeWidgets/Header.dart';
 import 'package:wa_clone/widgets/HomeWidgets/ListSection.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
+  static const route = '/';
 
   @override
   Widget build(BuildContext context) {
-    return CupertinoPageScaffold(
-      child: SafeArea(
+    return Scaffold(
+      drawer: const MyDrawer(),
+      body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 28),
           child: Column(
@@ -26,28 +31,5 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
     );
-    // return Scaffold(
-
-    //   // backgroundColor: Colors.white,
-    //   body: SafeArea(
-    //     child: Padding(
-    //       padding: const EdgeInsets.symmetric(horizontal: 28),
-    //       child: Column(
-    //         crossAxisAlignment: CrossAxisAlignment.start,
-    //         children: [
-    //           //Header
-    //           Header(),
-    //           // date section
-    //           HeaderSection(),
-    //           SizedBox(height: 16),
-    //           // Past due items
-    //           Expanded(
-    //             child: ListSection(sectionTitle: 'Todo'),
-    //           )
-    //         ],
-    //       ),
-    //     ),
-    //   ),
-    // );
   }
 }

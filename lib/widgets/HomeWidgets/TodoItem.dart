@@ -24,12 +24,15 @@ class _TodoItemState extends State<TodoItem> {
     setState(() {
       _isChecked = value ?? !_isChecked;
     });
-    Provider.of<TodoProvider>(context, listen: false)
-        .updateTodoItem(id: widget._todo.id, value: value!);
+    Provider.of<TodoProvider>(context, listen: false).updateTodoItem(
+      id: widget._todo.id,
+      value: _isChecked,
+    );
   }
 
   @override
   Widget build(BuildContext context) {
+    // print('rebuilt');
     final tileColor = _isChecked ? Colors.green[100] : Colors.grey[300];
 
     return Container(
@@ -42,7 +45,10 @@ class _TodoItemState extends State<TodoItem> {
         children: [
           Expanded(
             child: CheckboxListTile(
-              title: Text(widget._todo.todoContent),
+              title: Text(
+                widget._todo.todoContent,
+                style: const TextStyle(color: Colors.black),
+              ),
               onChanged: (value) => handleCheckboxClick(value, context),
               controlAffinity: ListTileControlAffinity.leading,
               value: _isChecked,

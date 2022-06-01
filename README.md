@@ -12,13 +12,12 @@ brew install --cask flutter
 Check that flutter is installed by running:
 
 ```bash
-flutter -v
+flutter --version
 ```
 
 Output should be similar to:
 
 ```bash
-flutter --version
 Flutter 2.8.1 • channel stable • https://github.com/flutter/flutter.git
 Framework • revision 77d935af4d (10 weeks ago) • 2021-12-16 08:37:33 -0800
 Engine • revision 890a5fca2e

@@ -9,19 +9,14 @@ class ListSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // final color = Theme.of(context).primaryColor;
     final todos = context.watch<TodoProvider>().todos;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Expanded(
-          child: Material(
-            color: Colors.white,
-            child: ListView.builder(
-              itemCount: todos.length,
-              itemBuilder: (_, index) =>
-                  TodoItem(todos[index], key: UniqueKey()),
-            ),
+          child: ListView.builder(
+            itemCount: todos.length,
+            itemBuilder: (_, index) => TodoItem(todos[index], key: UniqueKey()),
           ),
         ),
       ],
